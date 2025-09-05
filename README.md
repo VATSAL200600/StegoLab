@@ -23,41 +23,40 @@ It automates the use of popular tools like `binwalk`, `steghide`, `stegseek`, `z
 📦 Installation
 1. Clone the repository
    ```bash
-git clone https://github.com/VATSAL200600/StegoLab.git
-cd StegoLab
+   git clone https://github.com/VATSAL200600/StegoLab.git
+   cd StegoLab
 
 3. Install dependencies
 
 Install Python requirements:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 
 Install external tools (Kali usually has many pre-installed, but just in case):
 
-sudo apt update
-sudo apt install -y binwalk steghide stegseek exiftool zsteg
+    sudo apt update
+    sudo apt install -y binwalk steghide stegseek exiftool zsteg
 
 ▶️ Usage
-Run the tool
-python3 stegolab.py <image_file> -o <output_directory>
-
-
+1.Run the tool
 Example:
 
-python3 stegolab.py examples/test.png -o results
+    python3 stegolab.py <image_file> -o <output_directory>
+
+    python3 stegolab.py examples/test.png -o results
 
 Interactive Menu
 
 When you run the tool, you’ll see:
 
-StegoLab v3 - interactive menu
-Choose an option:
-  1) Run everything (fast built-ins + external tools)
-  2) Choose tools manually
-  3) Attempt steghide no-password & small bruteforce
-  4) Repair image headers and retry
-  5) Exit
+    StegoLab v3 - interactive menu
+    Choose an option:
+    1) Run everything (fast built-ins + external tools)
+    2) Choose tools manually
+    3) Attempt steghide no-password & small bruteforce
+    4) Repair image headers and retry
+    5) Exit
 
 
 Option 1 → Runs all analyses automatically.
@@ -97,15 +96,6 @@ Steghide hidden files
 ✅ User-friendly interactive menu
 
 🖼️ Screenshots / Demo
-
-👉 (You can replace these with your own images later)
-
-Example binwalk extraction:
-----------------------------
-DECIMAL       HEXADECIMAL     DESCRIPTION
---------------------------------------------------------------------------------
-0             0x0             ELF, 64-bit LSB shared object
-218244        0x35484         ESP Image (ESP32)
 
 Interactive Menu:
 -----------------
