@@ -95,7 +95,13 @@ Steghide hidden files
 ✅ Visual analysis (grayscale, bit-planes, color channels)
 ✅ User-friendly interactive menu
 
-🖼️ Screenshots / Demo
+🖼️ Screenshots
+<img width="566" height="249" alt="Screenshot 2025-09-05 211036" src="https://github.com/user-attachments/assets/eacdab89-6bed-4f37-ace3-c136deba4cb2" />
+Main interactive menu of StegoLab v3. Users can choose to run all tools at once, select specific stego tools manually, attempt steghide attacks without a password, repair broken image headers, or simply exit.
+<img width="841" height="382" alt="Screenshot 2025-09-05 211046" src="https://github.com/user-attachments/assets/979ad882-85d7-40e7-bb13-5c3092cb991e" />
+Working example with an input file (old_photo.jpg). After running StegoLab, a results/ directory is automatically created containing extracted artifacts and analysis outputs.
+<img width="1163" height="353" alt="Screenshot 2025-09-05 211059" src="https://github.com/user-attachments/assets/3d453a36-b776-4aba-b350-8422782b69ec" />
+Sample output structure of StegoLab. Results are neatly organized into separate folders (binwalk, strings, exiftool, stegseek, etc.) for easy navigation, along with a summary report for quick insights.
 
 Interactive Menu:
 -----------------
