@@ -22,10 +22,11 @@ It automates the use of popular tools like `binwalk`, `steghide`, `stegseek`, `z
 
 📦 Installation
 1. Clone the repository
+   ```bash
 git clone https://github.com/VATSAL200600/StegoLab.git
 cd StegoLab
 
-2. Install dependencies
+3. Install dependencies
 
 Install Python requirements:
 
