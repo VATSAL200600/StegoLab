@@ -20,13 +20,113 @@ It automates the use of popular tools like `binwalk`, `steghide`, `stegseek`, `z
 
 ---
 
-## 📦 Installation
+📦 Installation
+1. Clone the repository
+git clone https://github.com/VATSAL200600/StegoLab.git
+cd StegoLab
 
-### Requirements
-- Python 3.8+
-- Tools: `binwalk`, `steghide`, `stegseek`, `zsteg`, `exiftool`, `strings`
+2. Install dependencies
 
-Install dependencies:
-```bash
-sudo apt install binwalk steghide stegseek zsteg exiftool
+Install Python requirements:
+
 pip install -r requirements.txt
+
+
+Install external tools (Kali usually has many pre-installed, but just in case):
+
+sudo apt update
+sudo apt install -y binwalk steghide stegseek exiftool zsteg
+
+▶️ Usage
+Run the tool
+python3 stegolab.py <image_file> -o <output_directory>
+
+
+Example:
+
+python3 stegolab.py examples/test.png -o results
+
+Interactive Menu
+
+When you run the tool, you’ll see:
+
+StegoLab v3 - interactive menu
+Choose an option:
+  1) Run everything (fast built-ins + external tools)
+  2) Choose tools manually
+  3) Attempt steghide no-password & small bruteforce
+  4) Repair image headers and retry
+  5) Exit
+
+
+Option 1 → Runs all analyses automatically.
+
+Option 2 → Lets you pick (binwalk, stegseek, strings, zsteg, etc.).
+
+Option 3 → Tries steghide even without a password (quick bruteforce).
+
+Option 4 → Repairs corrupted headers and retries tools.
+
+📂 Output
+
+All results are saved in the output folder you specify (-o results).
+
+Example outputs:
+
+Extracted strings
+
+Binwalk dump
+
+LSB bit planes & grayscale channels
+
+Metadata (EXIF)
+
+Steghide hidden files
+
+🎯 Features
+
+✅ Extracts metadata (ExifTool)
+✅ Runs binwalk & auto extraction
+✅ Supports steghide (with/without password)
+✅ Integrates stegseek for brute-forcing
+✅ Strings extraction
+✅ Zsteg analysis (PNG LSB checks)
+✅ Image repairs (fix headers)
+✅ Visual analysis (grayscale, bit-planes, color channels)
+✅ User-friendly interactive menu
+
+🖼️ Screenshots / Demo
+
+👉 (You can replace these with your own images later)
+
+Example binwalk extraction:
+----------------------------
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             ELF, 64-bit LSB shared object
+218244        0x35484         ESP Image (ESP32)
+
+Interactive Menu:
+-----------------
+StegoLab v3 - interactive menu
+Choose an option:
+  1) Run everything
+  2) Choose tools manually
+  3) Attempt steghide no-password
+  4) Repair headers
+  5) Exit
+
+⚠️ Disclaimer
+
+This tool is made for CTF competitions, research, and educational purposes only.
+Do not use it for unauthorized or malicious activity.
+
+🤝 Contributing
+
+PRs and suggestions are welcome! Open an issue if you find bugs or want new features.
+
+📜 License
+
+MIT License – free to use, modify, and share.
+
+⭐ If you like this project, give it a star on GitHub – it motivates me to add more features!
